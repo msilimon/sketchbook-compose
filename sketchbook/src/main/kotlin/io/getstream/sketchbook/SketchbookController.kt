@@ -26,6 +26,7 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Canvas
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
@@ -281,6 +282,17 @@ public class SketchbookController {
         val size = bitmapSize.value
         val combinedBitmap = ImageBitmap(size.width, size.height, ImageBitmapConfig.Argb8888)
         val canvas = Canvas(combinedBitmap)
+        canvas.drawRect(
+            Rect(
+                0f,
+                0f,
+                size.width.toFloat(),
+                size.height.toFloat()
+            ),
+            Paint().apply {
+                color = backgroundColor
+            }
+        )
         imageBitmap?.let {
             val immutableBitmap = it.asAndroidBitmap().copy(Bitmap.Config.ARGB_8888, false)
             canvas.nativeCanvas.drawBitmap(immutableBitmap, imageBitmapMatrix.value, null)

@@ -35,7 +35,7 @@ Also, anyone can contribute to improving code, docs, or something following our 
 Add the dependency below to your **module**'s `build.gradle` file:
 ```gradle
 dependencies {
-    implementation("com.github.msilimon:sketchbook-compose:1.0.6")
+    implementation("com.github.msilimon:sketchbook-compose:1.0.7")
 }
 ```
 
