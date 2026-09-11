@@ -179,6 +179,12 @@ public fun Sketchbook(
             }
     ) {
         drawIntoCanvas { canvas ->
+            //draw background color
+            drawRect(
+                color = backgroundColor,
+                size = size
+            )
+
             // draw image bitmap on the canvas.
             controller.imageBitmap?.let { imageBitmap ->
                 var dx = 0f
