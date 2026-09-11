@@ -35,33 +35,9 @@ Also, anyone can contribute to improving code, docs, or something following our 
 Add the dependency below to your **module**'s `build.gradle` file:
 ```gradle
 dependencies {
-    implementation "io.getstream:sketchbook:1.0.4"
+    implementation("com.github.msilimon:sketchbook:1.0.6")
 }
 ```
-
-## SNAPSHOT 
-
-<details>
- <summary>See how to import the snapshot</summary>
-
-### Including the SNAPSHOT
-Snapshots of the current development version of Sketchbook are available, which track [the latest versions](https://oss.sonatype.org/content/repositories/snapshots/io/getstream/sketchbook/).
-
-To import snapshot versions on your project, add the code snippet below on your gradle file.
-```Gradle
-repositories {
-   maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
-}
-```
-
-Next, add the below dependency to your **module**'s `build.gradle` file.
-```gradle
-dependencies {
-    implementation "io.getstream:sketchbook:1.0.5-SNAPSHOT"
-}
-```
-
-</details>
 
 ## Usage
 
